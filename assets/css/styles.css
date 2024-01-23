@@ -258,6 +258,11 @@ list-style-type: none;
     background: #000;
     color: #fff;
 }
+.tour-item .content-tour .btn-buy:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
 /* Tickets modal  */
 #ticketModal{
     z-index: 3;
@@ -395,7 +400,7 @@ list-style-type: none;
 
 }
 .form-contact .input-message{
-    width: 100%;
+    width: 99%;
     padding: 8px;
     border: 1px solid #ccc;
 
@@ -408,6 +413,11 @@ list-style-type: none;
     background: #000000;
     text-transform: uppercase;
     font: 15px ;
+}
+.form-contact .btn-send:hover{
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
 }
 
 #main .img-map{
