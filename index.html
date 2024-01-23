@@ -44,12 +44,39 @@
 
         </div>
         <div id="slider">
-            <div class="text-content">
+            <div class="mySlides">
+                <img src="./assets/img/slider/chicago.jpg" style="width:100%">
+                <div class="text-content">
+                    <h3 class="text-heading">Chicago</h3>
+                    <p class="text-description">
+                        <b>Thank you, Chicago - A night we won't forget.</b>
+                    </p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img src="./assets/img/slider/la.jpg" style="width:100%">
+                <div class="text-content">
+                    <h3 class="text-heading">New York</h3>
+                    <p class="text-description">
+                        <b>The atmosphere in New York is lorem ipsum.</b>
+                    </p>
+                </div>
+            </div>
+            <div class="mySlides">
+                <img src="./assets/img/slider/ny.jpg" style="width:100%">
+                <div class="text-content">
+                    <h3 class="text-heading">Los Angeles</h3>
+                    <p class="text-description">
+                        <b>We had the best time playing at Venice Beach!</b>
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="text-content">
                 <h2 class="text-heading">New York</h2>
                 <div class="text-description">
                     The atmosphere in New York is lorem ipsum.
                 </div>
-            </div>
+            </div> -->
         </div>
         <div id="content">
             <!-- About section -->
@@ -141,9 +168,9 @@
                     <div class="body-modal">
                         <p class="label-input"><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per
                                 person</label></p>
-                        <input class="ticket-input" type="text" placeholder="How many ?">
+                        <input class="ticket-input" required type="text" placeholder="How many ?">
                         <p class="label-input"> <label><i class="fa fa-user"></i>Send To</label></p>
-                        <input class="ticket-input" placeholder="Enter email" type="text">
+                        <input class="ticket-input" required placeholder="Enter email" type="text">
                         <button class="btn-pay">PAY <i class="fa fa-check"></i></button>
                         <button class="btn-close" onclick="document.getElementById('ticketModal').style.display='none'">
                             Close <i class="fa fa-remove"></i></button>
@@ -167,13 +194,13 @@
                         <form action="">
                             <div class="input-info">
                                 <div class="input-name">
-                                    <input class="name" type="text" placeholder="Name">
+                                    <input required class="name" type="text" placeholder="Name">
                                 </div>
                                 <div class="input-email">
-                                    <input class="email" type="email" placeholder="Email">
+                                    <input required class="email" type="email" placeholder="Email">
                                 </div>
                             </div>
-                            <input class=" input-message" type="text" placeholder="Message">
+                            <input required class=" input-message" type="text" placeholder="Message">
                             <br>
                             <button class="btn-send"> Send</button>
                         </form>
@@ -200,5 +227,28 @@
         </div>
     </div>
 </body>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        const slides = document.getElementsByClassName("mySlides");
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+
+        // Chuyển đổi slide sau mỗi 3 giây (3000 milliseconds)
+        setTimeout(showSlides, 3000);
+    }
+</script>
 
 </html>
