@@ -6,7 +6,7 @@
 }
 
 html,body{
-    font-family: "Lato", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     font-size: 15px;
 }
@@ -25,7 +25,6 @@ html,body{
 #nav{
     display: inline-block;
 }
-
 
 #nav, .subnav{
     list-style-type: none;
@@ -77,25 +76,14 @@ text-transform: uppercase;
 #nav .nav-arrow-down {
     font-size: 12px;
 }
-#header .btn-menu{
-    display: none;
-}
-#header .btn-menu,
+
 #header .btn-search{
     float: right;
     padding: 0 21px;
 }
-#header .btn-menu:hover{
-    background-color: #ccc;
-}
-#header .btn-menu:hover .icon-menu{
-    color: #000;
-}
-
 #header .btn-search:hover{
     background-color: #f44336;
 }
-#header .icon-menu,
 #header .icon-search{
     color: #fff;
     font-size: 20px;
@@ -104,43 +92,28 @@ text-transform: uppercase;
 
 }
 
-
-/* Slider  */
 #slider{
-    position: relative;
-    margin-top: 46px;
-    /* padding-top: 50%; */
-}
-#silder .mySliders{
-    display: none;
-}
-#slider .mySliders img{
-    vertical-align: middle;
-
-}
-
-/* #slider{
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
     background: url(../img/slider/chicago.jpg) top center / cover no-repeat;
-} */
+}
 #slider .text-content{
     position: absolute;
     bottom: 48px;
     color: #fff;
-    left: 50%;
+    /* left: 50%; */
     text-align: center;
     width: 100%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
+
 }
 #slider .text-heading{
     font-weight: 300;
     font-size: 24px;
     margin: 10px 0;
 }
-
-#slider .mySlides .text-description{
+#slider .text-description{
     font-weight: bold;
     font-size: 15px;
 }
@@ -149,7 +122,6 @@ text-transform: uppercase;
 }
 #content .content-section{
     width: 800px;
-    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 16px;
@@ -172,7 +144,6 @@ text-transform: uppercase;
 #content .content-section .about{
     margin: 15px 0;
     font-size: 15px;
-    text-align: justify;
 }
 #content .content-section .members-list{
     padding: 32px 0;
@@ -240,7 +211,7 @@ list-style-type: none;
     width: 33.33333%;
     padding: 0 8px;
     margin-bottom: 16px;
-    
+
 }
 
 .tours_list .tour-item .tour-image{
@@ -271,11 +242,6 @@ list-style-type: none;
     padding: 8px 16px;
     background: #000;
     color: #fff;
-}
-.tour-item .content-tour .btn-buy:hover{
-    color: #000;
-    background-color: #ccc;
-    cursor: pointer;
 }
 /* Tickets modal  */
 #ticketModal{
@@ -392,6 +358,7 @@ list-style-type: none;
     margin-bottom: 16px;
 }
 .content-section .section-contact .form-contact{
+    width: 50%;
     color: #000;
     font-size: 15px;
 
@@ -426,11 +393,6 @@ list-style-type: none;
     background: #000000;
     text-transform: uppercase;
     font: 15px ;
-}
-.form-contact .btn-send:hover{
-    color: #000;
-    background-color: #ccc;
-    cursor: pointer;
 }
 
 #main .img-map{
