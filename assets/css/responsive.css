@@ -1,0 +1,58 @@
+ @media (min-width: 1024px) {
+           
+        }
+
+@media (min-width: 740px) and (max-width:1023px) {
+          
+        }
+
+@media (max-width:740px) {
+            #nav{
+                display: block;
+            }
+            #nav > li:first-child{
+                display: inline-block;
+            }
+            #header .btn-menu{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            #nav li a{
+                width: 100%;
+            }
+            #nav .subnav{
+                position: initial;
+                background-color: #333;
+            }
+            #nav .subnav a{
+                color: #fff;
+                padding: 5px 41px;
+            }
+            #nav > li,
+            #header .btn-menu,
+            .form-contact .input-info,
+            #content .content-section .members-list,
+            .tour-section .content-section .tours_list,
+            #content .content-section .section-contact {
+                display: block;
+            }
+            .content-section .tours_list .tour-item{
+                width: 100%;
+            }
+            #content .members-list .member-item{
+                width: 100%;
+                height: auto !important;
+            }
+           #header .btn-search{
+            display: none;
+           }
+           .content-section .section-contact .infomation-contact{
+            width: 100%;
+           }
+           .input-info .input-name .name, .input-info .input-email .email,
+           .form-contact .input-info .input-name, .form-contact .input-info .input-email{
+            width: 100%;
+           }
+
+        }

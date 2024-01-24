@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
     <title>The Band</title>
@@ -24,13 +25,13 @@
                 <li><a href="#contact">CONTACT</a>
                 </li>
                 <li>
-                    <a href="">MORE
+                    <a href="#">MORE
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -38,6 +39,9 @@
 
             <div class="btn-search">
                 <i class="icon-search ti-search"></i>
+            </div>
+            <div id="mobile-menu" class="btn-menu">
+                <i class="icon-menu ti-menu"></i>
             </div>
 
 
@@ -71,12 +75,6 @@
                     </p>
                 </div>
             </div>
-            <!-- <div class="text-content">
-                <h2 class="text-heading">New York</h2>
-                <div class="text-description">
-                    The atmosphere in New York is lorem ipsum.
-                </div>
-            </div> -->
         </div>
         <div id="content">
             <!-- About section -->
@@ -228,22 +226,51 @@
     </div>
 </body>
 <script>
+    var header = document.getElementById('header');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var headerHeight = header.clientHeight;
+
+    mobileMenu.onclick = function () {
+        // console.log(header.clientHeight)
+        var isClose = header.clientHeight === headerHeight;
+        if (isClose) {
+            header.style.height = "auto";
+        } else {
+            header.style.height = null;
+
+        }
+
+    }
+
+    // Tu dong khi click chon menu
+    var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+    for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+        menuItem.onclick = function (event) {
+            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+
+            if (isParentMenu) {
+                event.preventDefault();
+            } else {
+                header.style.height = null;
+
+            }
+        }
+    }
+
     let slideIndex = 0;
     showSlides();
 
     function showSlides() {
         const slides = document.getElementsByClassName("mySlides");
-
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
 
         slideIndex++;
-
         if (slideIndex > slides.length) {
             slideIndex = 1;
         }
-
         slides[slideIndex - 1].style.display = "block";
 
         // Chuyển đổi slide sau mỗi 3 giây (3000 milliseconds)
