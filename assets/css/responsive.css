@@ -62,5 +62,8 @@
     .form-contact .input-info .input-name, .form-contact .input-info .input-email{
      width: 100%;
     }
+    #ticketModal .modal-content{
+        width: 87%;
+    }
 
         }
